@@ -121,7 +121,12 @@ def main():
 
     #TODO determine and display the winner  (see sample output)
     #????
-    
+    if (player1pos >= 81):
+        print (f"At position {player1pos}, {player1name} is the winner!")
+        print (f"{player2name} has been eliminated")
+    elif (player2pos >= 81):
+        print (f"At position {player2pos}, {player2name} is the winner!")
+        print (f"{player1name} has been eliminated")
 
 
 

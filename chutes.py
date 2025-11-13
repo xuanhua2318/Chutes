@@ -79,19 +79,25 @@ def main():
 
         #TODO if player 1 has won set condition to get out of the loop
         #????
-
+        if player1pos >= 81:
+            winner = True
+            break
 
         #Generates a random number from 1 to 6 for player 2
         roll2 = random.randint(1,6)
 
         #TODO add roll2 to update player 2's position
         #????
-
-
-
+        player2pos = roll2
+        
         #TODO check the chutes and ladder for the player 2
         #???? Note, depending how you code this, it may need to be indented
-
+        for index in range(len(chutes_top)):
+            if player2pos == chutes_top[index]:
+                player2pos = chutes_bottom[index]
+            
+            if player2pos == ladders_bottom[index]:
+                player2pos = ladders_top[index]
 
 
         #end chutes and ladder for player 2
@@ -105,7 +111,9 @@ def main():
 
         #TODO if player 2 has won set condition to get out of the loop
         #????
-
+        if player2pos >= 81:
+            winner = True
+            break
 
 
 
@@ -113,6 +121,7 @@ def main():
 
     #TODO determine and display the winner  (see sample output)
     #????
+    
 
 
 
